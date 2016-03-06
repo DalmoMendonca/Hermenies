@@ -1,0 +1,19 @@
+<h2>Sign up</h2>
+
+<div class="form-group">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal"}, role: "form", wrapper: :horizontal_form) do |f| %>
+    <%= f.error_notification %>
+      <%= f.input :name %>
+      <%= f.input :email %>
+      <%= f.input :password, autocomplete: "off" %>
+      <%= f.input :password_confirmation, autocomplete: "off" %>
+    <div class="row">
+      <div class="col-sm-offset-3">
+        <%= f.submit "Sign up", class: "btn btn-primary" %> <br>
+        <%= render "devise/shared/links" %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
