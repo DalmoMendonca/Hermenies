@@ -1,12 +1,51 @@
 <div class="jumbotron">
 	<h1>Hermenies</h1>
-
 	<p>
-		You've found the home page for Hermenies.
+		Hermeneutics for the digital age
 	</p>
+	<% if user_signed_in? %>
+		<p>
+			<%= link_to "Add Text", new_text_path, class: "btn btn-primary btn-lg" %>
+			<%= link_to "View All Texts", texts_path, class: "btn btn-primary btn-lg" %>
+		</p>
+	<% else %>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+		</p>
+	<% end %>
+</div>
 
-	<p>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
 
-		<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-	</p>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
 </div>

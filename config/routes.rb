@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :texts
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'about' => 'pages#about'
   root :to => 'pages#home'

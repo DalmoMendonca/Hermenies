@@ -1,0 +1,8 @@
+<%= simple_form_for(@text) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title, input_html: { placeholder: 'Full title as published, with chapter numbers if it applies' } %>
+  <%= f.input :body, as: :text, input_html: { rows: 40 } %>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>
