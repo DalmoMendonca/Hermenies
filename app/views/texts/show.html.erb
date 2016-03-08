@@ -9,6 +9,9 @@
 			  <%= simple_format(@text.body) %>
 			</p>
 		</div>
+		<p>
+			  Text uploaded by <%= @text.user.name %>
+		</p>
 		<%= link_to 'Edit Text', edit_text_path(@text), class: 'btn btn-primary' %><br><br>
 		<%= link_to 'Back to All Texts', texts_path %>
 	</div>

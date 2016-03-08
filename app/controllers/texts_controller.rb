@@ -1,4 +1,5 @@
 class TextsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
   before_action :set_text, only: [:show, :edit, :update, :destroy]
 
   # GET /texts
@@ -14,7 +15,7 @@ class TextsController < ApplicationController
 
   # GET /texts/new
   def new
-    @text = Text.new
+    @text = current_user.texts.new #Text.new
   end
 
   # GET /texts/1/edit
@@ -24,7 +25,7 @@ class TextsController < ApplicationController
   # POST /texts
   # POST /texts.json
   def create
-    @text = Text.new(text_params)
+    @text = current_user.texts.new(text_params)
 
     respond_to do |format|
       if @text.save
