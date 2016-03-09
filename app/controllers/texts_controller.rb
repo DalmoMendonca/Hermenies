@@ -70,6 +70,6 @@ class TextsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def text_params
-      params.require(:text).permit(:title, :body)
+      params.require(:text).permit(:title, :body, :image)
     end
 end

@@ -1,6 +1,7 @@
 <tr>
   <td><%= link_to text.title, text %></td>
   <td><%= simple_format(text.body) %></td>
+  <td><%= image_tag text.image.present? ? text.image.url(:thumb) : "" %></td>
   <td><%= link_to 'Edit', edit_text_path(text), class: "btn btn-primary" %></td>
   <td><%= link_to 'Delete', text, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>

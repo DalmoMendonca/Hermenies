@@ -1,7 +1,11 @@
 <%= simple_form_for(@text) do |f| %>
   <%= f.error_notification %>
+  <%= f.full_error :image_file_size, class: "alert alert-error" %>
+  <%= f.full_error :image_content_type, class: "alert alert-error" %>
+
   <%= f.input :title, input_html: { placeholder: 'Full title as published, with chapter numbers if it applies' } %>
   <%= f.input :body, as: :text, input_html: { rows: 40 } %>
+  <%= f.input :image, label: "Upload text image" %>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
