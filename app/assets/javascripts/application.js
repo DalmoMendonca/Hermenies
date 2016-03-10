@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+//= require jquery.dotdotdot.min.js
+
+$(function() {
+  $('#responsive').dotdotdot({
+    watch: 'true'
+  });
+});

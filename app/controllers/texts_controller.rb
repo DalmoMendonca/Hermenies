@@ -5,7 +5,7 @@ class TextsController < ApplicationController
   # GET /texts
   # GET /texts.json
   def index
-    @texts = Text.all
+    @texts = Text.order("created_at desc")
   end
 
   # GET /texts/1

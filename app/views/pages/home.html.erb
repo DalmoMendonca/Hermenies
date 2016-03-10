@@ -14,6 +14,16 @@
 		</p>
 	<% end %>
 </div>
-
 <div class="row">
+  <% @texts.each do |text| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail dot-ellipsis dot-resize-update">
+        <td><div class="thumbnail-image"><%= image_tag text.image.present? ? text.image : "blank.jpg" %></div></td>
+        <div class="dot-ellipsis dot-resize-update caption" id="responsive">
+          <h3><%= link_to text.title, text %></h3>
+          <p><%= simple_format(text.body) %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

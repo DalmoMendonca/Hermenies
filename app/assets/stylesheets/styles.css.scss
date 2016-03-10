@@ -8,6 +8,8 @@ $navbar-default-bg: white;
 
 body {
 	padding-top: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .footer {
@@ -16,4 +18,37 @@ body {
 	a {
 		color: $gray;
 	}
+}
+
+.thumbnail-image { 
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  background: #4679BD;
+}
+
+.thumbnail-image:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.thumbnail-image img {
+  width: 100%;
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.thumbnail { 
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.caption {
+	width: 100%;
+	height: 200px;
 }
